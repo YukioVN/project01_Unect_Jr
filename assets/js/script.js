@@ -23,41 +23,40 @@ cancelBtn.addEventListener('click', function() {
 
 //slider
 
-var variable = 1;
+var token = 1;
 nextBtn.addEventListener('click', function() {
-    switch(variable) {
+    switch(token) {
       case 1:
         firstSlide.classList.remove("team-image1");
         firstSlide.classList.add("team-image1-disactive");
         secondSlide.classList.remove("team-image2")
         secondSlide.classList.add("team-image2-active");
-        console.log(variable);
-        variable++;
+        token++;
         break;
       case 2:
         secondSlide.classList.remove("team-image2-active");
         secondSlide.classList.add("team-image2");
         thirdSlide.classList.remove("team-image3");
         thirdSlide.classList.add("team-image3-active");
-        variable++;
+        token++;
         break;
     }
 });
 
 previewBtn.addEventListener('click', function() {
-  switch(variable) {
+  switch(token) {
     case 2:
       secondSlide.classList.remove("team-image2-active");
       secondSlide.classList.add("team-image2");
       firstSlide.classList.remove("team-image1-disactive");
-      variable--;
+      token--;
       break;
     case 3:
       thirdSlide.classList.remove("team-image3-active");
       thirdSlide.classList.add("team-image3");
       secondSlide.classList.remove("team-image2")
       secondSlide.classList.add("team-image2-active");
-      variable--;
+      token--;
       break;
   }
 });
